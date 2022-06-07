@@ -80,7 +80,8 @@
 	<!--link rel="stylesheet" type="text/css" href="https://skylightanimation.github.io/assets/plugin/bootstrap/3.3.7/bootstrap.min.css"-->
 	<script type="text/javascript" src="https://skylightanimation.github.io/assets/plugin/jquery/jquery-3.4.1.min.js"></script>
 	<script type="text/javascript" src="https://skylightanimation.github.io/assets/plugin/bootstrap/3.3.7/bootstrap.min.js"></script>
-
+	<!-- Sweet alernt-->
+	<script src="js/sweetalert2.all.js"></script>
 </head>
 <body>
 
@@ -825,6 +826,12 @@
 	  e.preventDefault()
 	  fetch(scriptURL, { method: 'POST', body: new FormData(form)})
 		.then(response => {
+			//notif sukses
+			Swal.fire(
+				'Terimakasih',
+				'Pesan anda sudah terkirim',
+				'success'
+				)
 			//reset form
 			form.reset();
 			console.log('Success!', response);
