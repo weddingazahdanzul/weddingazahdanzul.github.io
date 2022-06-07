@@ -534,7 +534,11 @@
 							<i class="fab fa-instagram"><i class="icon-instagram"></i></i> @thegreatzul
 						 </a>
 					</p>
-					<h1 style="font-family:'Candara'"> | </h1>
+					<p>
+						<a href="https://github.com/zulakbar/weddingzuldanazah" class="has-vertically-align">
+							<p class="has-vertically-align">2022 &copy Zukarnaen Akbar</p>
+						</a>	
+					</p>
 				</div>
 			</div>
 
@@ -836,7 +840,14 @@
 			form.reset();
 			console.log('Success!', response);
 		})
-		.catch(error => console.error('Error!', error.message))
+		.catch(error => {
+			Swal.fire(
+				'Connection Lost',
+				'Pesan anda gagal terkirim, mohon cek kembali koneksi anda',
+				'warning'
+				)			
+			console.error('Error!', error.message)
+		} )
 	})
 </script>
 
